@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+.container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column wrap;
+   font-family: 'Outfit';
+}
+
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-family: 'Outfit';
+}
+
+.navContainer h3{
+    padding: 20px;
+    transition: 0.7s;
+}
+
+.navContainer h3 a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.navContainer h3:hover{
+
+    transform: scale(1.2);
+}

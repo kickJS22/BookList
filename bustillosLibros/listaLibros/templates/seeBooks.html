@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'seeBooks.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <h1>Lista de Libros</h1>
+    <ol>
+        {% for book in listaLibros %}
+        <a href="{% url 'bookList:ver-detalles' book.tituloD %}"><li class="seeLi">{{book.tituloD}}</li></a>
+        {% empty %}
+            <li>No hay libros disponibles, crea uno</li>
+        
+        {%endfor%}
+    </ol>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'bookDetail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="bookDetailContainer">
+        <h1>{{bookDetail.tituloD}}</h1>
+        <h2>Autor: {{bookDetail.autorD}}</h2>
+        <h2>Año: {{bookDetail.yearD}}</h2>
+        <h2>Cantidad de Páginas: {{bookDetail.cantPagD}}</h2>
+        <h2>Precio: {{bookDetail.precioD}}$</h2>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+
+.bookDetailContainer {
+    display: flex;
+    margin: 50px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px;
+    padding: 20px;
+    height: auto;
+    max-width: 500px;
+    width: auto;
+    border: 3px solid black;
+    transition: 1s;
+}
+
+.bookDetailContainer:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 1px black;
+}
+
+.bookDetailContainer h1{
+    font-size: 90px;
+}
+
+.bookDetailContainer h2{
+    padding-left: 10px;
+    font-size: 30px;
+}

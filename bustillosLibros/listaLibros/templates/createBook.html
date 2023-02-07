@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%load static%}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'createBook.css' %}">
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'bookList:crear-libro' %}" method="post">
+    {% csrf_token %}
+    <div class="formContainer">
+        {{djangoForm}}
+        <input type="submit" name="submit" id="submit" value="Enviar">
+    </div>
+    </form>
+{% endblock %}
