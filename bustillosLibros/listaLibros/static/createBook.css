@@ -1,16 +1,18 @@
-
 .formContainer{
     display: flex;
-    margin: 50px;
+    margin: 10px;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
 .formContainer input {
+    padding: 10px;
     font-size: 20px;
     margin: 10px;
     transition: 1s;
+    border-radius: 50px;
+    background-color: white;
 }
 
 .formContainer input:hover{

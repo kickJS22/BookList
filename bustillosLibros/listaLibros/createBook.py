@@ -5,9 +5,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 
 class newBookForm(forms.Form):
-    tituloF = forms.CharField(label="Título")
+    # Con widget=forms.TextInput(attrs={'autofocus': True}) lo que le digo es que me agregue un atributo/widget de autofocus
+    tituloF = forms.CharField(label="Título", widget=forms.TextInput(attrs={'autofocus': True}))
     autorF = forms.CharField(label="Autor")
-    yearF = forms.IntegerField(label="Año")
+    yearF = forms.IntegerField(label="Año de publicación")
     cantPagF = forms.IntegerField(label="Cantidad de Págs.")
     precioF = forms.IntegerField(label="Precio")
 
@@ -24,6 +25,7 @@ def newBook(request):
             # .title() sirve para convertir a mayuscula la primera letra de cada palabra 
             newTitle = newTitle.title()
             newAutor = sendedForm.cleaned_data["autorF"]
+            newAutor = newAutor.title()
             newYear = sendedForm.cleaned_data["yearF"]
             newCantPage = sendedForm.cleaned_data["cantPagF"]
             newPrice = sendedForm.cleaned_data["precioF"]

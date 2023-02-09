@@ -9,12 +9,11 @@ def index(request):
 def VerLibros(request):
     # Con order_by obtengo todos los elementos pero ordenados alfabeticamente con el título
     djangoModel = models.newBook.objects.order_by('tituloD')
-    return render(request, "seeBooks.html", { "listaLibros": djangoModel })
+    return render(request, "seeBooks.html", { "listaLibros": djangoModel})
 
 def VerDetalles(request, bookTitle):
     try:
         bookModel = models.newBook.objects.get(tituloD = bookTitle)
-
         return render(request, "bookDetail.html", {"bookDetail": bookModel})
 
     except:

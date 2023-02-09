@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+body{
+    margin: 25px;
+}
 
 .container{
    display: flex;

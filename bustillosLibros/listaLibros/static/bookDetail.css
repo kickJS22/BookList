@@ -27,3 +27,11 @@
     padding-left: 10px;
     font-size: 30px;
 }
+
+@media screen and (max-width : 504px) {
+    .bookDetailContainer{
+        transform: scale(0.6);
+        margin: 0px;
+    }
+    
+}

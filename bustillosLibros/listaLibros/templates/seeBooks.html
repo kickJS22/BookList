@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {%load static%}
-
 {% block style %}
 <link rel="stylesheet" href="{% static 'seeBooks.css' %}">
 {% endblock %}
@@ -8,9 +7,13 @@
 
 {% block content %}
     <h1>Lista de Libros</h1>
+    <input type="text" id="searchBar" placeholder="Buscar libro">
+    <h1 id="cantLibros">Cantidad de libros: </h1>
     <ol>
         {% for book in listaLibros %}
-        <a href="{% url 'bookList:ver-detalles' book.tituloD %}"><li class="seeLi">{{book.tituloD}}</li></a>
+        <!-- Con forloop.counter le estoy diciendo que en cada elemento de listaLibros sume uno a forloop.counter que es una variable nativa que por defecto vale 1-->
+        <!-- Esta varible sirve para esta situación donde quiero aumentar un número en 1 cada vez que se realice una iteración del bucle -->
+        <a href="{% url 'bookList:ver-detalles' book.tituloD %}"><li data-number="{{forloop.counter}}" class="seeLi">{{book.tituloD}}</li></a>
         {% empty %}
             <li>No hay libros disponibles, crea uno</li>
         
